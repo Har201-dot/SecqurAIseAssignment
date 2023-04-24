@@ -23,3 +23,9 @@ export default function Events({ loading }) {
 		</MainContainer>
 	);
 }
+
+{
+	/* <LoadingSpinner
+					additionalStyles={{ position: "relative", top: "45%" }}
+				/> */
+}
