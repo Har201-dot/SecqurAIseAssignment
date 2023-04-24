@@ -12,19 +12,14 @@ const MainContainer = styled(Box)({
 	display: "flex",
 	flexDirection: "column",
 });
+
 export default function Events({ loading }) {
 	const [filter, setFilter] = useState({ Location: [], Gender: [], Date: "" });
 
 	return (
 		<MainContainer>
 			<EventsTop setFilter={setFilter} filter={filter} />
-			{loading ? (
-				<LoadingSpinner
-					additionalStyles={{ position: "relative", top: "45%" }}
-				/>
-			) : (
-				<EventList filter={filter} />
-			)}
+			{loading ? <h1>Loading ....</h1> : <EventList filter={filter} />}
 		</MainContainer>
 	);
 }
